@@ -14,9 +14,14 @@
   },
   "scripts": {
     "test": "jest",
-    "express" : "yarn ts-node src/http/express/index.ts"
+    "express" : "yarn ts-node src/http/express/index.ts",
+    "preinstall" : "tsc",
+    "production" : "node ./dist/src/http/express/index.js"
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
